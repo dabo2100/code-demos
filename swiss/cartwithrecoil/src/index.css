@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+#root,
+.App {
+  height: 100vh;
+  width: 100%;
+}
+
+@media print {
+  table {
+    width: 100%;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    display: table !important;
+  }
+
+  .hidePrint {
+    display: none !important;
+  }
+}

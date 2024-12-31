@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    /* width: 100%; */
+    width: 1240px;
+    max-width: 100%;
+}
+
+header {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+header .iconDiv {
+    display: flex;
+    align-items: center;
+    gap: 7.71px;
+}
+
+.iconDiv img {
+    width: 18.29px;
+    height: 18.33px;
+
+}
+
+nav {
+    display: flex;
+    gap: 48px;
+}
+
+.actionsDiv {
+    display: flex;
+    gap: 8px;
+}
+
+.actionsDiv button {
+    width: 82px;
+    height: 40px;
+    padding: 10px 18px 10px 18px;
+    border-radius: 6px;
+}
+
+.iconDiv h2 {
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+nav a {
+    font-family: Barlow;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.reg {
+    width: 94px;
+    height: 40px;
+    padding: 10px 18px 10px 18px;
+    border-radius: 6px;
+    border: 1px solid #1576D6;
+    background-color: transparent;
+    color: #1576D6;
+    font-weight: 500;
+}
+
+.sign {
+    width: 94px;
+    height: 40px;
+    padding: 10px 18px 10px 18px;
+    border-radius: 6px;
+    border: 1px solid #1576D6;
+    background-color: #1576D6;
+    color: white;
+    font-weight: 500;
+}

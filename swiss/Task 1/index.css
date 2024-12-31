@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+}
+.actions{
+    display: flex;
+}
+#menu{
+    display: none;
+}
+@media screen and (max-width : 767px) {
+    nav {
+        display: none !important;
+    }
+    .actions{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+}

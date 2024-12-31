@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 70%;
+    height: 80vh;
+    /* background-color: red; */
+    display: flex;
+}
+
+.container .left {
+    width: 65%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 30px;
+    gap : 20px;
+}
+
+.container .right {
+    width: 35%;
+    height: 100%;
+    background-color: blue;
+    background-image: url("./close-up-male-athlete-warming-be.jpg");
+    background-size: cover;
+}
+
+.left h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 65px;
+    text-transform: uppercase;
+    color: rgb(17, 17, 17);
+    width: 100%;
+
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.row img {
+    width: 16px;
+}
+
+.row p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(246, 99, 99);
+    text-align: center;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    padding: 11px 46px;
+    border: 0;
+    margin-top : 1rem;
+}

@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Barlow;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.theContainer {
+    width: 1240px;
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+
+header {
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    align-items: center;
+}
+
+header p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    letter-spacing: 0.02em;
+}
+
+header .logo {
+    display: flex;
+    gap: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 48px;
+}
+
+nav a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    letter-spacing: 0.02em;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.actions .btn1 {
+    width: 94px;
+    height: 40px;
+    padding: 10px 18px 10px 18px;
+    border-radius: 6px;
+    border: 1px #1576D6 solid;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #1576D6;
+    background-color: transparent;
+
+}
+
+.actions .btn2 {
+    width: 94px;
+    height: 40px;
+    padding: 10px 18px 10px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    background-color: #1576D6;
+    color: white;
+    border: 0;
+}
+
+header .menuIcon {
+    display: none;
+
+}
+
+.heroSection {
+    width: 100%;
+    height: 500px;
+    /* background-color: green; */
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heroSection .bgImg {
+    width: 100%;
+    height: 500px;
+    background-image: url("./bg.jpeg");
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 10px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.overlay h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+    text-align: center;
+    color: white;
+
+}
+
+.overlay p {
+    max-width: 650px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: white
+}
+
+.searchBox {
+    background-color: white;
+    width: 1030px;
+    max-width: 100%;
+    margin-top: -32px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 37px 0px #00000026;
+    padding: 10px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inputField {
+    position: relative;
+}
+
+.inputField input {
+    width: 210px;
+    height: 43px;
+    padding: 11px 12px 12px 37px;
+    border-radius: 4px;
+    background: #F2F2F2;
+    border: 0;
+    outline: 0;
+}
+
+.inputField img {
+    position: absolute;
+    top: 12px;
+    left: 11px;
+}
+
+.searchBox button {
+    width: 148px;
+    height: 44px;
+    padding: 12px 18px 12px 18px;
+    border-radius: 6px;
+    color: white;
+    background-color: #1576D6;
+    font-family: Barlow;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    border: 0;
+
+}
+
+
+@media screen and (max-width : 767px) {
+    .logo p {
+        color: white;
+    }
+
+    header {
+        width: 92%;
+        position: fixed;
+        /* background-color: blue; */
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .actions {
+        display: none;
+    }
+
+    header .menuIcon {
+        display: block;
+
+    }
+
+    .heroSection {
+        height: 120vh;
+        margin-top: 0;
+    }
+
+    .heroSection .bgImg {
+        height: 100vh;
+        border-radius: 0;
+        background-position-x: 0%;
+    }
+
+    .overlay {
+        border-radius: 0;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-bottom: 45px;
+        padding-left: 16px;
+    }
+
+    .overlay h1 {
+        font-size: 22px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .searchBox {
+        margin-top: 0;
+        padding: 16px;
+        row-gap: 16px;
+    }
+
+    .searchBox button {
+        width: 100%;
+    }
+}

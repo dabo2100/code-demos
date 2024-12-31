@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+.left {
+    display: flex;
+    gap: 1rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background-color: red;
+}
+
+#menu {
+    display: none;
+}
+
+/* Media Query */
+
+@media screen and (max-width : 767px) {
+    body {
+        /* background-color: yellow; */
+    }
+
+    .son1 {
+        order: 2;
+    }
+
+    .son2 {
+        order: 1;
+    }
+
+    .son3 {
+        order: 3;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+}
+
+@media screen and (min-width : 768px) and (max-width : 992px) {
+    body {
+        background-color: green;
+    }
+}
+
+/* Width - Order - font-size - display : none , postion , flex-direction */
+/* phone design 0 => 767px  */
+/* Tablet Design 768px => 992 */
+/* PC Design > 992 */
+
+
+.parent {
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.son {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    font-size: 2.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

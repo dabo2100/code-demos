@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    height: 50vh;
+    width: 50%;
+    background-color: red;
+}
+
+.son {
+    height: 100px;
+    width: 50%;
+    background-color: yellow;
+    position: sticky;
+    top: 0;
+}
+
+.ads {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$myColor: red;
+
+// Nested CSS
+// Scoped CSS
+
+#test {
+  h1 {
+    font-size: 2rem;
+    color: $myColor;
+
+    &:hover {
+      background-color: black;
+    }
+
+    &::after {
+      content: "=>";
+    }
+
+    @media screen and (max-width: 767px) {
+      background-color: beige;
+    }
+
+    span {
+      padding: 1rem;
+      p {
+        color: red;
+      }
+    }
+  }
+}

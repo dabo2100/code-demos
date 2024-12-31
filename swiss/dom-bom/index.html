@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body
+    class="d-flex align-items-center justify-content-center"
+    style="min-height: 100vh"
+  >
+    <form
+      class="d-flex flex-wrap gap-3 p-3 bg-dark text-white bordered col-12 col-md-4 rounded"
+      onsubmit="login(event)"
+    >
+      <input
+        id="emailInput"
+        type="text"
+        class="form-control"
+        placeholder="Enter user email"
+      />
+      <span id="emailErrorSpan" class="col-12 text-danger d-none">Error Will Be here</span>
+      <input
+        id="passInput"
+        type="text"
+        class="form-control"
+        placeholder="Enter user password"
+      />
+      <label>
+        password must have at least 6 Chart password must have spcial Char
+      </label>
+      <button class="btn btn-primary col-12">Login</button>
+    </form>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.14.4/sweetalert2.all.js"
+      integrity="sha512-LrUtHyiVJpdXK5QmxAA/yovZgrTZo0Dhq+/puc/tYvoqf0E7/ItN+aQVimiy1ALd3oiWNACYOFYZWrLsOelGxw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
