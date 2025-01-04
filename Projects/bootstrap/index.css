@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.son {
+    height: 200px;
+    background-color: blueviolet;
+}

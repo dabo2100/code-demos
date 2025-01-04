@@ -1,0 +1,6 @@
+#sectionOne {
+    background-image: url(../imgs/section-one.jpeg);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
