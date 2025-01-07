@@ -1,1 +1,4 @@
-#category-container {}
+#category-container {
+    width: 256px;
+    max-width: 100%;
+}
