@@ -25,11 +25,12 @@ header .parent {
     bottom: -5rem;
     display: none;
 }
-.parent:hover{
-    color : black
+
+.parent:hover {
+    color: black
 }
 
-.parent:hover .son{
-    color : white;
+.parent:hover .son {
+    color: white;
     display: block;
 }
