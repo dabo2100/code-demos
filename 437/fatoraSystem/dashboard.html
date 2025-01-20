@@ -1,0 +1,202 @@
+<!-- Admin Panel -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container col-12 d-flex flex-column">
+      <h4>Welcome Admin to Dashboard</h4>
+
+      <button
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#addNewModal"
+        onclick="clearInputs()"
+      >
+        <i class="fa-solid fa-square-plus"></i>
+        Add New Product
+      </button>
+
+      <table
+        id="productsTable"
+        class="table table-dark table-bordered text-center align-middle"
+      >
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>Item Stock</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- -----------------------------------------    Modal Add New Product -->
+      <div
+        class="modal fade"
+        id="addNewModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Add New Product
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="col-12 d-flex flex-column gap-3">
+                <label for="">New Product Name</label>
+                <input
+                  id="productName"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter New Name Here"
+                />
+                <label for="">New Product Price</label>
+                <input
+                  id="productPrice"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter New Price Here"
+                />
+                <label for="">Qty of Product in stock</label>
+                <input
+                  id="productQty"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Qty Here"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                id="closeModal"
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="addNewProduct()"
+              >
+                Add New
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Of New Product Modal -->
+
+      <!-- -----------------------------------------    Modal Add New Product -->
+      <div
+        class="modal fade"
+        id="editProdcutModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Edit Product
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="col-12 d-flex flex-column gap-3">
+                <label for="">New Product Name</label>
+                <input
+                  id="productNameEdit"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter New Name Here"
+                />
+                <label for="">New Product Price</label>
+                <input
+                  id="productPriceEdit"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter New Price Here"
+                />
+                <label for="">Qty of Product in stock</label>
+                <input
+                  id="productQtyEdit"
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Qty Here"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                id="closeModal2"
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="saveChanges()"
+              >
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Of New Product Modal -->
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.15.10/sweetalert2.all.js"
+        integrity="sha512-39ZBE3xNYd9rnIrwuskSg4G8uP83q9BSM/G0xtHbNb3AXQx+MkiHH+e8bj5+WxB+jtixKID7NQS9zPJlVoLL/A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+      ></script>
+      <!-- <script src="./data.js"></script> -->
+      <script src="./dashboard.js"></script>
+    </div>
+  </body>
+</html>
