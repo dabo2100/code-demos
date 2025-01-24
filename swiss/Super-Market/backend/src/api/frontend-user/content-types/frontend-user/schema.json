@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "frontend_users",
+  "info": {
+    "singularName": "frontend-user",
+    "pluralName": "frontend-users",
+    "displayName": "Frontend Users"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_name": {
+      "type": "string"
+    },
+    "user_password": {
+      "type": "string"
+    },
+    "is_admin": {
+      "type": "boolean"
+    },
+    "user_email": {
+      "type": "email",
+      "unique": true,
+      "required": true
+    }
+  }
+}

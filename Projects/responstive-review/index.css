@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.carousel-indicators {
+    justify-content: flex-start !important;
+}
+
+.carousel-indicators button {
+    width: 3rem !important;
+    height: 3rem !important;
+    border-radius: 50% !important;
+}
+
+.carousel-indicators button.active {
+    background-color: black !important;
+}
+
+
+.parent {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.parent:hover img {
+    transform: scale(1.5);
+}
+
+.parent img {
+    transition: ease all 400ms;
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 2rem;
+}
+
+.card {
+    transition: ease all 400ms;
+    background-color: black;
+    background-size: cover;
+    height: 200px;
+}
+
+#pro1 {
+    background-image: url("./Product\ 2.jpg");
+}
+
+#pro1:hover {
+    background-image: url("./hover-Product\ 2.jpg");
+}
+
+
+.kanba {
+    height: 200px;
+    background-color: #ffd5c9;
+    position: relative;
+    overflow: hidden;
+}
+
+.kanba img {
+    position: absolute;
+    right: 0;
+    top: -2rem;
+    transition: ease 400ms all;
+}
+
+.kanba:hover img {
+
+    top: 1rem;
+}
+
+.card h1 {
+    transition: ease 400ms all;
+}
+
+.card:hover h1 {
+    display: block !important;
+}
+
+.card h1:hover {
+    background-color: red !important;
+}
+
+.card:hover .icon {
+    display: block;
+}
+
+.icon {
+    position: relative;
+    width: 120px;
+    display: none;
+
+}
+
+.icon:hover p {
+    display: block;
+}
+
+
+.icon p {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+#slide1 {
+    height: 5rem !important;
+    width: 5rem !important;
+    border-radius: 0 !important;
+    background-image: url("./Product\ 1.jpg") !important;
+    background-position: 50% !important;
+    background-size: contain;
+}
