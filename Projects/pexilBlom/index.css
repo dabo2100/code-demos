@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", serif;
+}
+
+header {
+    background-color: rgb(14, 15, 17);
+    width: 100%;
+}
+
+header nav {
+    background-color: #212224;
+}
+
+header img {
+    width: 247px;
+    max-width: 50%;
+}
+
+header nav a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: ease all 500ms;
+    padding: 1rem;
+    border-radius: 100px;
+}
+
+header nav a:hover {
+    background-color: #D0FF71;
+    color: black
+}
+
+header button {
+    background-color: #D0FF71;
+    padding: 1rem;
+    border-radius: 100px;
+    border: 0;
+}
+
+
+#sectionOne {
+    /* min-height: 100vh; */
+    background-color: black;
+}
+
+#sectionOne img {
+    width: 450px;
+    max-width: 100%;
+}
+
+#sectionOne .left h2 {
+    color: white;
+    font-size: 108px;
+    font-weight: 700;
+}
+
+#sectionOne .left h1 {
+    color: transparent;
+    font-size: 150px;
+    font-weight: 800;
+    -webkit-text-stroke: 1px white;
+}
+
+#sectionOne .left p {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.greenBtn {
+    background-color: #D0FF71;
+    padding: 1rem;
+    border-radius: 100px;
+    border: 0;
+}
+
+#sectionTwo {
+    background-color: #18191b;
+    border-top: 5px solid #d0ff71;
+}
+
+#sectionTwo .shiny h2 {
+    color: white;
+    font-size: 80px;
+    font-weight: 800;
+}
+#sectionTwo .shiny p{
+    color : grey;
+    font-size : 22px;
+}
+
+@media screen and (max-width : 767px) {
+    #sectionOne .left h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    #sectionOne .left h2 {
+        font-size: 70px;
+        text-align: center;
+    }
+}
