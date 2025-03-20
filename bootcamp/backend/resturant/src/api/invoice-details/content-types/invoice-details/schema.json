@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices_details",
+  "info": {
+    "singularName": "invoice-details",
+    "pluralName": "invoices-details",
+    "displayName": "Invoices-details",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "product_qty": {
+      "type": "integer"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "invoice": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::invoice.invoice",
+      "inversedBy": "invoices_details"
+    }
+  }
+}

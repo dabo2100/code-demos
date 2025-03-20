@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pos_users",
+  "info": {
+    "singularName": "pos-user",
+    "pluralName": "pos-users",
+    "displayName": "pos_users",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user_name": {
+      "type": "string"
+    },
+    "user_phone": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "user_role": {
+      "type": "string"
+    },
+    "user_password": {
+      "type": "string"
+    },
+    "invoices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::invoice.invoice",
+      "mappedBy": "pos_user"
+    }
+  }
+}
