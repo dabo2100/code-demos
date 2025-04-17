@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+.App,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 
+sweetalert2
+animate.css
+bootstrap
+react-icons 
+*/

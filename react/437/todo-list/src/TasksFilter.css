@@ -1,0 +1,21 @@
+.tasksFilter {
+    padding: 32px;
+    width: 325px;
+    max-width: 90%;
+    height: 100vh;
+    border-right: 1px solid #6C757D80;
+}
+
+.tasksFilter p {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 14px 16px;
+    letter-spacing: 0%;
+    margin-bottom: 8px;
+}
+
+.tasksFilter p.active {
+    font-weight: 500;
+    color: #1576D6;
+    background: #F8F9FACC;
+}

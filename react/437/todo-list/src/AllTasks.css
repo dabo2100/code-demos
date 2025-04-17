@@ -1,0 +1,23 @@
+.allTasks {
+    padding: 50px;
+}
+
+.allTasks .addBtn {
+    width: 134;
+    height: 40;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    border: 1px solid #00B4D8;
+    background-color: transparent;
+    color: #25292C;
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+
+}

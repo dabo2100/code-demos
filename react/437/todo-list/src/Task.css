@@ -1,0 +1,37 @@
+.task {
+    width: 100%;
+    /* max-width: 100%; */
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #BBD0FF;
+    border-radius: 15px;
+}
+
+.task h2 {
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.6px;
+    letter-spacing: 0%;
+    color: #25292C;
+}
+
+.task p {
+    font-family: Barlow;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.4px;
+    margin: 0;
+    color: #25292C;
+}
+
+.task input {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.task input:checked {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+}

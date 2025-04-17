@@ -1,0 +1,26 @@
+.heroSection {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/HeroSection-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.heroSection img {
+    width: 510px;
+    max-width: 100%;
+}
+
+.left h1 {
+    font-size: 32px;
+    color: white;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.4) 2px 2px 8px;
+}
+
+.left p {
+    font-size: 18px;
+    color : white;
+    font-weight: 600;
+}

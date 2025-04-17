@@ -1,0 +1,13 @@
+/* Global CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+.App,
+#root {
+  min-height: 100vh;
+  width: 100%;
+}

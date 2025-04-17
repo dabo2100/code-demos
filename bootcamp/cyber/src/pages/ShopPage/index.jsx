@@ -65,7 +65,7 @@ export default function ShopPage() {
             </div>
             <div className='col-9 d-flex flex-column p-3'>
                 <div className='d-flex justify-content-between'>
-                    <h3>Available Products:{productsTotal}</h3>
+                    <h3>Total Products:{productsTotal}</h3>
 
                     <select onChange={(e) => setProductPerPage(e.target.value)}>
                         <option value="5">5</option>
@@ -79,6 +79,7 @@ export default function ShopPage() {
                     {products && products.map((el) => (
                         <ProductCard
                             key={el.documentId}
+                            product={el}
                             name={el.name}
                             price={el.price}
                             salePrice={el.salePrice}

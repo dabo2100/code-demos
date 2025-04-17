@@ -1,0 +1,16 @@
+.servicesSection .card {
+    border-radius: 20px;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+.orange {
+    background-color: orangered;
+}
+
+.purple {
+    background-color: purple;
+}
