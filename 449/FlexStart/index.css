@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Nunito", sans-serif; */
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 100%;
+  max-width: 1320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    padding: 0 12px;
+  }
+}
+
+.btn {
+  background-color: #4154f1;
+  color: white;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22.5px;
+  padding: 8px 25px;
+  display: flex;
+  align-items: center;
+  text-decoration: none solid rgb(1, 41, 112);
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 18px 0px;
+
+  .container {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 767px) {
+      padding: 0 12px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      h1 {
+        font-family: "Nunito", sans-serif;
+        color: #012970;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
+        a {
+          font-family: "Poppins", sans-serif;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 22.5px;
+          text-decoration: none solid rgb(1, 41, 112);
+          text-align: left;
+          white-space: nowrap;
+          word-spacing: 0px;
+          padding: 18px 0;
+          color: #012970;
+        }
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .barsIcon {
+          color: #012970;
+          display: none;
+          font-size: 28px;
+          @media screen and (max-width: 767px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+#hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  .container {
+    @media screen and (max-width: 767px) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      flex-direction: column-reverse;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  .left {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-family: Nunito, sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+      text-decoration: none solid rgb(1, 41, 112);
+      word-spacing: 0px;
+      color: #012970;
+      max-width: 636px;
+    }
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      line-height: 30px;
+      text-decoration: none solid color(srgb 0.266667 0.266667 0.266667 / 0.7);
+      word-spacing: 0px;
+      color: #444444b2;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+
+      align-items: center;
+      gap: 25px;
+      margin-top: 40px;
+      .btn {
+        display: flex;
+        gap: 5px;
+        font-size: 16px;
+        padding: 12px 40px;
+        i {
+          color: white;
+          font-size: 16px;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+      }
+      i {
+        color: #4154f1;
+        font-size: 32px;
+      }
+    }
+  }
+}
