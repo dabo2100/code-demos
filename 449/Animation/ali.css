@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-red {
+  background-color: red;
+}
+.bg-blue {
+  background-color: blue;
+}
+.bg-yellow {
+  background-color: yellow;
+}
+
+.c-white {
+  color: white;
+}
+.c-blue {
+  color: blue;
+}
+.c-yellow {
+  color: yellow;
+}

@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Chau Philomene One", sans-serif;
+}
+
+header {
+  .input-field {
+    i {
+      height: 1rem;
+      top: calc(50% - 0.7rem);
+      left: 11px;
+    }
+    input {
+      width: 260px;
+      background: #7749f826;
+      border-radius: 4px;
+      padding: 6px 18px 6px 45px;
+    }
+  }
+}
+
+.card-container {
+  padding: 8px;
+  @media screen and (max-width: 767px) {
+    width: 100% !important;
+  }
+}
+
+.card {
+  a {
+    background-color: #7749f8 !important;
+    width: 100%;
+    &:hover {
+      background-color: #dc3545 !important;
+    }
+  }
+}

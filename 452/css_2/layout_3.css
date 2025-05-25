@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.upper {
+  width: 100%;
+  height: 10vh;
+  background-color: #ddd;
+}
+
+.hamada {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+}
+.lower {
+  width: 100%;
+  height: 5vh;
+  background-color: #ddd;
+}
+
+.slice1 {
+  width: 10%;
+  height: 100%;
+  padding: 10px;
+}
+
+.slice2 {
+  width: 5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.slice3 {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.slice4 {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px;
+}
+
+.son1 {
+  width: 100%;
+  height: 75%;
+  background-color: #ddd;
+}
+
+.son2 {
+  width: 100%;
+  height: 11.625%;
+  background-color: #ddd;
+}
+
+.son3 {
+  width: 100%;
+  height: 25%;
+  background-color: #ddd;
+}
+.son4 {
+  width: 100%;
+  height: 35%;
+  background-color: #ddd;
+}

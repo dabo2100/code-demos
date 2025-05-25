@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  nav {
+    a {
+      font-family: Poppins, sans-serif;
+      line-height: 24px;
+      color: #124265;
+      cursor: pointer;
+    }
+    .dropdown {
+      background-color: transparent !important;
+      button {
+        background-color: transparent !important;
+        color: black;
+        border: 0 !important;
+        &:hover {
+          color: black !important;
+        }
+      }
+    }
+  }
+}
+
+.parent {
+  .overlay {
+    transition: 1s;
+    bottom: -3rem;
+  }
+
+  &:hover .overlay {
+    bottom: 0;
+  }
+}
