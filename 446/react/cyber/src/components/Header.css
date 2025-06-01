@@ -1,0 +1,9 @@
+nav{
+    a{
+        color : green;
+        transition: 0.5s;
+        &:hover{
+            background-color: red;
+        }
+    }
+}
