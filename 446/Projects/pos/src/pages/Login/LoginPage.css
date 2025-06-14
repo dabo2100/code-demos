@@ -1,0 +1,17 @@
+#LoginPage {
+  #loginForm {
+    padding: 3rem 5%;
+    h1 {
+      font-size: 35px;
+      font-weight: 900;
+    }
+
+    p {
+      color: var(--darkgrey);
+    }
+
+    button {
+      background-color: var(--yellow);
+    }
+  }
+}
