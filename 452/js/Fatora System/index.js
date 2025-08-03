@@ -11,6 +11,7 @@ let cart = [
   { id: 2, name: 'iPhone 11', price: 450, qty: 5 },
 ];
 
+let totalSpan = document.querySelector('#totalSpan');
 let table = document.querySelector('table tbody');
 let productsDiv = document.querySelector('#productsDiv');
 
@@ -26,6 +27,14 @@ let showProducts = () => {
         </div>
     `;
   });
+};
+
+let getTotal = () => {
+  let final = 0;
+  cart.forEach((el) => {
+    final += el.price * el.qty;
+  });
+  totalSpan.innerText = final;
 };
 
 let showCart = () => {
@@ -51,6 +60,7 @@ let showCart = () => {
             </tr>
         `;
   });
+  getTotal();
 };
 
 showProducts();
