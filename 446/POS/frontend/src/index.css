@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+:root {
+  --redColor: #c8161d;
+  --yellowColor: #ffca40;
+}
+
+@font-face {
+  font-family: Glory;
+  src: url('./assets/gilroy-regular.ttf');
+}
+
+* {
+  font-family: Glory;
+}

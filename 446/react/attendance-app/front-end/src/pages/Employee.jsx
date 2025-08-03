@@ -1,10 +1,18 @@
-import { Link, useNavigate } from "react-router-dom";
-import { systemEmployes } from "../store";
+import { Link, useNavigate } from 'react-router-dom';
+import { checkToken } from '../shaedLogic/middleware';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { domain } from '../store';
 
 export default function EmployeeList() {
-  const { list } = systemEmployes();
   const navigate = useNavigate();
-
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    axios.get(`${domain}/api/employees`).then((res) => {
+      setList(res.data.data);
+    });
+    !checkToken() && navigate('/login');
+  }, []);
   return (
     <div className="w-full h-full flex flex-col items-center py-5">
       <div className="container">
@@ -25,11 +33,7 @@ export default function EmployeeList() {
           </thead>
           <tbody>
             {list.map((el, index) => (
-              <tr
-                key={el.id}
-                className="hover:bg-base-300"
-                onClick={() => navigate("./" + el.id)}
-              >
+              <tr key={el.documentId} className="hover:bg-base-300" onClick={() => navigate('./' + el.documentId)}>
                 <td>{index + 1}</td>
                 <td>{el.name}</td>
                 <td>{el.salary} EGP</td>

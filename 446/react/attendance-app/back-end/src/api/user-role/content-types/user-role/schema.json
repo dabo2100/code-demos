@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_roles",
+  "info": {
+    "singularName": "user-role",
+    "pluralName": "user-roles",
+    "displayName": "userRole"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "user_roles"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "admin",
+        "user"
+      ]
+    }
+  }
+}

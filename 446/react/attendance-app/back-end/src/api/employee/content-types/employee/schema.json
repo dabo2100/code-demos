@@ -19,6 +19,12 @@
     },
     "title": {
       "type": "string"
+    },
+    "user_roles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-role.user-role",
+      "mappedBy": "employee"
     }
   }
 }

@@ -1,8 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./pages/Login";
-import { Toaster } from "react-hot-toast";
-import EmployeeList from "./pages/Employee";
-import EmployeeDetails from "./pages/EmployeeDetails";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login';
+import { Toaster } from 'react-hot-toast';
+import EmployeeList from './pages/Employee';
+import EmployeeDetails from './pages/EmployeeDetails';
+import Dashbaord from './pages/Dashbaord';
+import NewEmployee from './pages/NewEmployee';
 
 export default function App() {
   return (
@@ -10,11 +12,11 @@ export default function App() {
       <Toaster position="top-center" reverseOrder={false} />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<h1>Dashboard</h1>} />
+          <Route path="/" element={<Dashbaord />} />
 
           <Route path="/employee">
             <Route index element={<EmployeeList />} />
-            <Route path="new" element={<h1>Form To Add New employee</h1>} />
+            <Route path="new" element={<NewEmployee />} />
             <Route path=":employeeId" element={<EmployeeDetails />} />
           </Route>
           {/* I will Plan Attendance Routes - I Will Plan Reports Routes */}

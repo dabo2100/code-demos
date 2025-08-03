@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+      .myModal {
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide{
+        width: 100%;
+        height: 100vh;
+      
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  </head>
+  <body>
+    <!-- Interface (dummy data) -->
+    <div class="container d-flex flex-column gap-3 p-3">
+      <h1>My E-Wallet</h1>
+      <div class="d-flex col-12 col-md-6 align-items-center gap-3">
+        <h3>You Balance is : <span id="balanceSpan">****</span> EGP</h3>
+        <button onclick="openModal()" class="btn btn-primary">
+          <i id="showIcon" class="fa-solid fa-eye"></i>
+          Balance
+        </button>
+        <button class="btn btn-dark" onclick="showTransactions()">Show History</button>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center gap-3 bg-white rounded shadow border p-3">
+        <input id="amountInput" placeholder="Enter Amount" class="form-control" />
+        <button class="btn btn-danger" onclick="withdrawAmount()">withdarw</button>
+        <button class="btn btn-success" onclick="depositAmount()">deposit</button>
+      </div>
+    </div>
+    <table class="table container table-dark table-border table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Before Balance</th>
+          <th>Trasnaction Amount</th>
+          <th>Trasnaction Type</th>
+          <th>After Balance</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="myModal" onclick="closeModal()">
+      <div onclick="event.stopPropagation()" class="col-5 bg-white rounded shadow border p-3 d-flex flex-column gap-3 animate__animated animate__fadeInDown">
+        <h1>Enter Your Password</h1>
+        <input id="balancePassword" placeholder="Enter your Password" class="form-control" />
+        <button class="btn btn-primary" onclick="showBalance()">Show Balance</button>
+      </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="slide" style="background-color: black"></div>
+        </div>
+        <div class="carousel-item">
+          <div class="slide" style="background-color: blue"></div>
+        </div>
+        <div class="carousel-item">
+          <div class="slide" style="background-color: green"></div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+let todos = [ {id : 1, name : "Go To Work", isDone : false}, {id : 1, name : "Go To Work", isDone : false}, {id : 1, name : "Go To Work", isDone : false}, {id : 1, name : "Go To Work", isDone : false}, {id : 1, name : "Go To Work", isDone : false}, ]
