@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+}
+
+header {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  i {
+    font-size: 20px;
+  }
+}
+
+.hero-section {
+  width: 100%;
+  padding: 8rem 0;
+  background-image: url('./fcb14a161aa9547b4673c26e4bc92cdd.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .content {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(170, 229, 99, 0.2);
+    width: 720px;
+    height: 431px;
+    /* I will Write Medai Query */
+    max-width: 90%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    p {
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 72px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    a {
+      background-color: #74ae2d;
+      color: white;
+      padding: 10px 30px 10px 30px;
+      font-family: 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    a:hover {
+      background-color: #5f8f25;
+    }
+
+    /* Psedou class (other state) */
+
+    .box1 {
+      width: 90px;
+      height: 90px;
+      border-top: 2px solid white;
+      border-right: 2px solid white;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+
+    .box2 {
+      width: 90px;
+      height: 90px;
+      border-bottom: 2px solid white;
+      border-left: 2px solid white;
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+    }
+  }
+}
+
+.section-1 {
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  padding: 3rem 0;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: #111111;
+    /* 100 % 570px */
+    img {
+      width: 570px;
+      max-width: 90%;
+      height: 496px;
+      @media screen and (max-width: 767px) {
+        order: 2;
+      }
+    }
+
+    .content {
+      /* الحسبة ديه للمقاس الكبير فقط */
+      width: calc(100% - 570px - 2rem);
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 0 2rem;
+
+      @media screen and (max-width: 767px) {
+        width: 90%;
+        order: 1;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+
+      hr {
+        width: 64px;
+        border: 3px solid #81c132;
+      }
+
+      p {
+        font-family: 'Open Sans', sans-serif;
+      }
+    }
+  }
+}
+
+.section-2 {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    padding-bottom: 20rem;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .left {
+      position: relative;
+      @media screen and (max-width: 767px) {
+        order: 2;
+      }
+      p {
+        font-family: Merriweather, serif;
+        font-size: 24px;
+        line-height: 38.4px;
+        text-decoration: none solid rgb(17, 17, 17);
+        text-align: left;
+        color: #111111;
+        width: 260px;
+      }
+
+      i {
+        color: #e5e5e5;
+        font-size: 64px;
+        position: absolute;
+        z-index: -1;
+        top: -1rem;
+        left: -1rem;
+      }
+    }
+
+    img {
+      width: 572px;
+      max-width: 50%;
+      height: 365px;
+      position: absolute;
+      left: calc(50% - (572px / 2));
+      box-shadow: rgba(26, 26, 26, 0.55) 0px 0px 31px 0px;
+      @media screen and (max-width: 767px) {
+        position: static;
+        order: 1;
+        margin-top: -5rem;
+        object-fit: cover;
+      }
+    }
+
+    .right {
+      height: 253px;
+      width: 385px;
+      padding: 35px 21px;
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      background-color: #f2f2f2;
+      position: absolute;
+      right: 0;
+      top: -2rem;
+      box-shadow: rgba(26, 26, 26, 0.55) 0px 0px 31px 0px;
+      @media screen and (max-width: 767px) {
+        position: static;
+        order: 3;
+      }
+
+      h3 {
+        font-size: 36px;
+      }
+
+      hr {
+        width: 64px;
+        border: 3px solid #81c132;
+      }
+    }
+  }
+}
+

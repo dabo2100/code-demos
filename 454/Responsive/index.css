@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    a {
+      font-size: 1.4rem;
+    }
+  }
+
+  button {
+    display: block;
+    padding: 1rem 2rem;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  #menuIcon {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+}
+
+.hero {
+  width: 100%;
+  padding: 7rem 1rem;
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .content {
+    width: 450px;
+    max-width: 100%;
+    h1 {
+      font-size: clamp(2rem, 5vw, 4rem);
+    }
+    @media screen and (max-width: 767px) {
+      order: 2;
+    }
+  }
+
+  img {
+    width: 500px;
+    max-width: 100%;
+    @media screen and (max-width: 767px) {
+      order: 1;
+    }
+  }
+}
+
+/* كيف تتصرف في المقاس الصغير */
+
+/* CSS Proprties */
+/* 
+    1- width - max-width 
+    2- font-size 
+    3- flex-dircetion
+    4- order
+    5- padding , Margin 
+    6- items hidden (show )
+        - display : none vs ( block - flex);
+        - visibality : hidden
+        - opacity
+*/
