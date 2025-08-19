@@ -1,12 +1,12 @@
 import { domain } from '../store';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { LoginRepo } from '../data/Repo';
 
 export default function useLogin() {
   let url = domain + '/api/auth/local';
   const navigate = useNavigate();
-
+  const location = useLocation();
   const login = (values) => {
     LoginRepo.auth_login(values)
       .then((res) => {
@@ -35,10 +35,13 @@ export default function useLogin() {
     if (jwt) {
       LoginRepo.check_token(jwt)
         .then((res) => {
+          let adminLocation = location.pathname.includes('admin');
           let role = res.data.user_role.name;
-          if (role == 'admin') {
+          let userInfo = res.data;
+          sessionStorage.setItem('user-info', JSON.stringify(userInfo));
+          if (role == 'admin' && !adminLocation) {
             navigate('/admin');
-          } else {
+          } else if (role != 'admin' && adminLocation) {
             navigate('/pos');
           }
         })
@@ -46,9 +49,18 @@ export default function useLogin() {
           localStorage.clear();
           sessionStorage.clear();
           console.log(err.response.data.error.message);
+          navigate('/login');
         });
+    } else {
+      navigate('/login');
     }
   };
 
-  return { login, checkToken };
+  const logOut = () => {
+    localStorage.clear();
+    sessionStorage.clear();
+    navigate('/login');
+  };
+
+  return { login, checkToken, logOut };
 }

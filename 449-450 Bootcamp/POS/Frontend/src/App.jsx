@@ -1,6 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import { Toaster } from 'react-hot-toast';
+import CategoriesPage from './pages/CategoriesPage';
+import PosLayout from './layouts/PosLayout';
+import CategotyProducts from './pages/CategotyProducts';
 
 export default function App() {
   return (
@@ -8,9 +11,10 @@ export default function App() {
       <Toaster position="top-center" reverseOrder={false} />
       <BrowserRouter>
         <Routes>
-          <Route path="/pos">
-            <Route index element={<h1>Show All Categories</h1>} />
-            <Route path="categories/:categoryId" element={<h1>Show Products in The Category</h1>}></Route>
+          <Route path="/pos" element={<PosLayout />}>
+            <Route index element={<CategoriesPage />} />
+            <Route path="categories/:categoryId" element={<CategotyProducts />}></Route>
+            <Route path="cart" />
           </Route>
           <Route path="/admin" element={<h1>Admin Page</h1>} />
           <Route path="login" element={<LoginPage />} />
