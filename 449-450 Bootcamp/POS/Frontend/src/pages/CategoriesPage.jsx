@@ -19,7 +19,7 @@ export default function CategoriesPage() {
     <div className="w-full h-full overflow-auto flex items-center flex-col">
       <div className={pageStyle}>
         {categories.map((el, index) => (
-          <CategoryCard  key={el.documentId} category={el} index={index}/>
+          <CategoryCard key={el.documentId} category={el} index={index} />
         ))}
       </div>
     </div>

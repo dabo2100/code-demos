@@ -5,7 +5,7 @@ import useLogin from '../hooks/useLogin';
 import { useCart } from '../store';
 
 export default function PosHeader() {
-  const { openCart } = useCart();
+  const { openCart, cartContent } = useCart();
   const [userInfo, setUserInfo] = useState({});
   const { checkToken, logOut } = useLogin();
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function PosHeader() {
       </Link>
       <h1 className="text-lg p-3">Welcome , {userInfo?.username}</h1>
       <div className="flex gap-3">
-        <button className="btn btn-success" onClick={openCart}>
+        <button className="btn btn-success" disabled={cartContent.length == 0 ? true : false} onClick={openCart}>
           <IoCart />
           Open Cart
         </button>
