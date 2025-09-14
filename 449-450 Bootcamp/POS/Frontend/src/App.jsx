@@ -6,6 +6,9 @@ import PosLayout from './layouts/PosLayout';
 import CategotyProducts from './pages/CategotyProducts';
 import AdminLayout from './layouts/AdminLayout';
 import InvoicesPage from './pages/InvoicesPage';
+import UsersPage from './pages/UsersPage';
+import AddNewUser from './pages/AddNewUser';
+import UserDetails from './pages/UserDetails';
 
 export default function App() {
   return (
@@ -21,8 +24,13 @@ export default function App() {
           <Route path="admin" element={<AdminLayout />}>
             <Route index element={<h1>Dashboard Page Page</h1>} />
             <Route path="invoices" element={<InvoicesPage />} />
-            <Route path="users" element={<h1>Users Page</h1>} />
+            <Route path="users">
+              <Route index element={<UsersPage />} />
+              <Route path="new" element={<AddNewUser />} />
+              <Route path=":userId" element={<UserDetails />} />
+            </Route>
           </Route>
+
           <Route path="login" element={<LoginPage />} />
           <Route path="*" element={<h1>404 | Page Not Found</h1>} />
         </Routes>

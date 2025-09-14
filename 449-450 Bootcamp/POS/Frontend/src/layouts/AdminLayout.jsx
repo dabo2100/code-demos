@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 export default function AdminLayout() {
   let linkStyle = 'text-lg white hover:bg-gray-800 transition cursor-pointer p-3';
+
   const { checkToken, logOut } = useLogin();
   useEffect(() => checkToken(), []);
 
