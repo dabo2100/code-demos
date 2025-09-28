@@ -3,8 +3,10 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
+import { loader } from '../store';
 
 export default function LoginPage() {
+  const { openLoader, closeLoader } = loader();
   const navigate = useNavigate();
 
   const validationSchema = Yup.object({
@@ -20,12 +22,16 @@ export default function LoginPage() {
       identifier: values.email,
       password: values.password,
     };
+    openLoader();
     axios
       .post(url, data)
       .then((res) => {
-        toast.success('Success Login');
         sessionStorage.setItem('jwt', res.data.jwt);
-        navigate('/');
+        setTimeout(() => {
+          toast.success('Success Login');
+          closeLoader();
+          navigate('/');
+        }, 2000);
       })
       .catch((err) => {
         toast.error(err.response.data.error.message);

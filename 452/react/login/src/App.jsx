@@ -3,10 +3,16 @@ import LoginPage from './pages/LoginPage';
 import { Toaster } from 'react-hot-toast';
 import HomePage from './pages/HomePage';
 import MainLayout from './MainLayout';
+import Loader from './components/Loader';
+import { loader } from './store';
 
 export default function App() {
+  // const [loader, setLoader] = useState(false);
+  const { index } = loader();
   return (
     <div className="w-full h-dvh bg-gray-950 text-white">
+      {/* {index ? <Loader /> : null} */}
+      {index && <Loader />}
       <Toaster />
       <BrowserRouter>
         <Routes>

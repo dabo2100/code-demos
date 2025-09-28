@@ -1,9 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import SideMenu from './components/SideMenu';
 import { Outlet, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { loader, userInfo } from './store';
 
 export default function MainLayout() {
+
+  const { setUserInfo } = userInfo();
   const navigate = useNavigate();
   useEffect(() => {
     let jwt = sessionStorage.getItem('jwt');
@@ -19,6 +22,7 @@ export default function MainLayout() {
           headers: { Authorization: `Bearer ${jwt}` },
         })
         .then((res) => {
+          setUserInfo(res.data);
           console.log(res);
         })
         .catch((err) => {
@@ -37,3 +41,8 @@ export default function MainLayout() {
     </div>
   );
 }
+
+// State managment
+// Context API ( Internal Into React ) [performance Isusse]
+// External with Lib (Recoil (Not Supported React 19) - Zustand)
+// Redux (Old - Organized - Learning Curve)  - Two Months
