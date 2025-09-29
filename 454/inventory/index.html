@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css" integrity="sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container flex flex-column">
+      <h1>Welcome to dashbaord</h1>
+      <div class="d-flex">
+        <button class="btn btn-primary" onclick="openModal()">Add New Phone</button>
+      </div>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Qty</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div onclick="closeModal()" id="modal" class="d-none align-items-center justify-content-center">
+      <div onclick="event.stopPropagation()" class="col-5 bg-white rounded shadow border p-4 d-flex flex-column gap-3 animate__animated animate__fadeInDown">
+        <h3>Add New Product</h3>
+        <input id="productName" class="form-control" placeholder="Enter new phone Name" />
+        <input id="productPrice" class="form-control" placeholder="Enter new phone price" />
+        <input id="productQty" class="form-control" placeholder="Enter new phone qty" />
+        <button onclick="addNewPhone()" class="btn btn-success">Save Phone</button>
+      </div>
+    </div>
+
+    <div onclick="closeModal2()" id="modal2" class="d-none align-items-center justify-content-center">
+      <div onclick="event.stopPropagation()" class="col-5 bg-white rounded shadow border p-4 d-flex flex-column gap-3 animate__animated animate__fadeInDown">
+        <h3>Edit Product</h3>
+        <input id="productName2" class="form-control" placeholder="Enter new phone Name" />
+        <input id="productPrice2" class="form-control" placeholder="Enter new phone price" />
+        <input id="productQty2" class="form-control" placeholder="Enter new phone qty" />
+        <button onclick="EditPhoneData()" class="btn btn-success">Save Phone</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
